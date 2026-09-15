@@ -20,7 +20,7 @@ export default function NextSeason() {
   }, []);
 
   return (
-    <section ref={ref} className="w-full min-h-screen bg-[#030303] relative flex flex-col items-center justify-center font-mono overflow-hidden py-32 border-t border-white/5">
+    <section ref={ref} className="w-full min-h-screen bg-transparent relative flex flex-col items-center justify-center font-mono overflow-hidden py-32 border-t border-transparent">
       
       <style>{`
         @keyframes lightSweep {

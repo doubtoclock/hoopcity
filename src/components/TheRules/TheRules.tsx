@@ -105,7 +105,7 @@ export default function TheRules() {
       </div>
 
       {/* Desktop view: Sticky horizontal scroll */}
-      <div className="hidden md:flex sticky top-0 h-screen w-full overflow-hidden items-center bg-black">
+      <div className="hidden md:flex sticky top-0 h-screen w-full overflow-hidden items-center bg-transparent">
         
         {/* Cinematic Ambient Glow Background */}
         <motion.div style={{ x: backgroundX }} className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">

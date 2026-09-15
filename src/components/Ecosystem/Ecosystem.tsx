@@ -33,7 +33,7 @@ export default function Ecosystem() {
   }, []);
 
   return (
-    <section id="ecosystem" ref={sectionRef} data-visible={isVisible} className="group relative w-full min-h-screen bg-transparent flex items-center px-8 md:px-16 xl:px-32 py-24 overflow-hidden border-t border-white/5">
+    <section id="ecosystem" ref={sectionRef} data-visible={isVisible} className="group relative w-full min-h-screen bg-transparent flex items-center px-8 md:px-16 xl:px-32 py-24 overflow-hidden border-t border-transparent">
       
       {/* Background Ambient Gradients */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">

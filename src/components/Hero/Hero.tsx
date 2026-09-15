@@ -24,21 +24,8 @@ export default function Hero() {
     setTilt({ x: 0, y: 0 });
   };
   return (
-    <section className="relative w-full h-screen flex flex-col overflow-hidden bg-black">
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 z-0 animate-fade-in-slow">
-        <Image
-          src="/images/hero.png"
-          alt="Hoop City Background"
-          fill
-          priority
-          className="object-cover object-bottom opacity-30 mix-blend-screen"
-        />
-        {/* Subtle orange atmospheric glow behind logo/headline */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#FF6100] opacity-10 blur-[120px] rounded-full mix-blend-screen pointer-events-none"></div>
-        {/* Subtle red/magenta glow lower behind title */}
-        <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[40%] bg-[#F40B9B] opacity-5 blur-[100px] rounded-full mix-blend-screen pointer-events-none"></div>
-      </div>
+    <section className="relative w-full h-screen flex flex-col overflow-hidden bg-transparent">
+
 
       {/* Main Center Composition */}
       <div className="relative z-10 flex-1 flex flex-col justify-center items-center mt-12 w-full px-4">
@@ -71,7 +58,7 @@ export default function Hero() {
           >
             <div className="w-8 md:w-12 h-[1px] bg-[#FF6100]/40"></div>
             <span className="font-mono text-[9px] md:text-[10px] tracking-[0.4em] text-[#FF6100]">
-              FOR THE PLOT.
+              FOR THE PLOT™.
             </span>
             <div className="w-8 md:w-12 h-[1px] bg-[#FF6100]/40"></div>
           </div>

@@ -59,10 +59,13 @@ export default function Navbar() {
 
       {/* Left: Logo, Title, and Descriptor */}
       <div className="flex items-center gap-6 w-1/3 z-10">
-        <div className="flex items-center gap-4">
-          <img src="/logo.svg" alt="HC" className="w-14 h-14 object-contain" />
-          <span className="font-ribes text-white text-sm md:text-base tracking-[0.1em] font-bold whitespace-nowrap">HOOP CITY</span>
-        </div>
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-4 cursor-pointer group outline-none"
+        >
+          <img src="/logo.svg" alt="HC" className="w-14 h-14 object-contain group-hover:scale-105 transition-transform duration-300" />
+          <span className="font-ribes text-white text-sm md:text-base tracking-[0.1em] font-bold whitespace-nowrap group-hover:text-[#FF6100] transition-colors duration-300">HOOP CITY</span>
+        </button>
         
         {/* Red Crosshair Divider */}
         <div className="hidden md:flex relative w-4 h-4 items-center justify-center shrink-0 mx-2">
@@ -115,7 +118,7 @@ export default function Navbar() {
           }}
           className="border border-red-600/80 text-white font-ribes text-[10px] md:text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-red-600/10 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all"
         >
-          CITY SHIFT <span className="text-red-500 font-sans text-sm leading-none -mt-0.5">↗</span>
+          CITY SHIFT™ <span className="text-red-500 font-sans text-sm leading-none -mt-0.5">↗</span>
         </a>
       </div>
       

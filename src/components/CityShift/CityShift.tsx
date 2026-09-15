@@ -53,7 +53,7 @@ export default function CityShift() {
   }, [isLive]);
 
   return (
-    <section id="city-shift" className="w-full min-h-screen bg-[#020202] relative font-mono text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.2em] overflow-hidden flex flex-col justify-between p-6 md:p-12 z-10 border-t border-white/5">
+    <section id="city-shift" className="w-full min-h-screen bg-transparent relative font-mono text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.2em] overflow-hidden flex flex-col justify-between p-6 md:p-12 z-10 border-t border-transparent">
       
       {/* Background Environment */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden flex justify-center items-center">
@@ -70,9 +70,9 @@ export default function CityShift() {
 
       {/* Header */}
       <div className="flex justify-between items-center w-full relative z-50">
-        <SectionHeading number="06" title="CITY SHIFT" />
+        <SectionHeading number="06" title="CITY SHIFT™" />
         <span className="flex items-center gap-3 tracking-[0.3em] uppercase transition-colors duration-1000">
-          CITY SHIFT / {isLive ? <span className="text-white">LIVE</span> : 'ACTIVE'}
+          CITY SHIFT™ / {isLive ? <span className="text-white">LIVE</span> : 'ACTIVE'}
           <span className={`w-2 h-2 rounded-full transition-all duration-[800ms] ${isLive ? 'bg-[#FF6100] shadow-[0_0_15px_rgba(255,97,0,1)]' : isHovered ? 'bg-[#FF6100] shadow-[0_0_8px_rgba(255,97,0,0.6)]' : 'bg-[#444] shadow-none'}`}></span>
         </span>
       </div>
@@ -112,8 +112,8 @@ export default function CityShift() {
         </div>
         
         <CinematicButton 
-          text="ACTIVATE CITY SHIFT" 
-          activeStateText="CITY SHIFT / ACTIVE" 
+          text="ACTIVATE CITY SHIFT™" 
+          activeStateText="CITY SHIFT™ / ACTIVE" 
           isActive={isLive} 
           onClick={() => setIsLive(!isLive)} 
           number="04" 
@@ -122,7 +122,7 @@ export default function CityShift() {
 
       {/* Empty Footer spacing to balance the top header */}
       <div className="flex justify-between items-center w-full relative z-50 opacity-0 pointer-events-none">
-        <SectionHeading number="06" title="CITY SHIFT" />
+        <SectionHeading number="06" title="CITY SHIFT™" />
       </div>
 
     </section>

@@ -113,7 +113,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
                 <div className="w-4 h-0.5 bg-red-600"></div>
-                <span className="text-white font-mono text-[10px] tracking-[0.2em] uppercase">HOOP CITY</span>
+                <span className="text-white font-mono text-[10px] tracking-[0.2em] uppercase">HOOP CITY™</span>
               </div>
               <div className="flex flex-col font-mono text-[8px] text-white/50 tracking-[0.2em] uppercase">
                 <span>BASKETBALL</span>
@@ -172,7 +172,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
           <div className="flex flex-col md:flex-row md:items-start justify-between w-full mb-10 mt-4 md:mt-0 gap-6">
             <div className="flex flex-col">
               <h3 className="text-white font-mono text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">
-                JOIN HOOP CITY
+                JOIN HOOP CITY™
               </h3>
               <div className="flex items-center gap-4">
                 <div className="w-6 h-0.5 bg-red-600"></div>
@@ -258,7 +258,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 
                 <div className="flex items-center gap-4 text-white/20 font-mono text-[7px] tracking-[0.3em] uppercase">
                   <div className="w-8 h-px bg-white/10 hidden md:block"></div>
-                  <span>FOR THE PLOT.</span>
+                  <span>FOR THE PLOT™.</span>
                 </div>
               </div>
             </div>

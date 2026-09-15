@@ -8,7 +8,7 @@ import CinematicButton from '../CinematicButton';
 const partnersLeft = [
   { num: '01', title: 'TEAM', subtitle: 'Naming & Identity', image: '/partners/partner_team_1789334919484.jpg' },
   { num: '02', title: 'JERSEY', subtitle: 'Front & Back Placement', image: '/partners/partner_jersey_1789334930280.jpg' },
-  { num: '03', title: 'CITY SHIFT', subtitle: 'Immersive Activation', image: '/partners/partner_city_shift_1789334941712.jpg' },
+  { num: '03', title: 'CITY SHIFT™', subtitle: 'Immersive Activation', image: '/partners/partner_city_shift_1789334941712.jpg' },
 ];
 
 const partnersRight = [

@@ -23,7 +23,7 @@ export default function Tickets() {
     <section 
       id="tickets"
       ref={containerRef}
-      className="relative w-full bg-[#050505] flex items-center justify-center overflow-hidden py-16 md:py-24 border-t border-white/5"
+      className="relative w-full bg-transparent flex items-center justify-center overflow-hidden py-16 md:py-24 border-t border-transparent"
     >
       {/* Background Orbitals */}
       <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function Tickets() {
 
           <div className="hidden xl:flex flex-col gap-2 mt-20 text-[#666] font-mono text-[9px] tracking-[0.3em] uppercase">
             <span>NAGPUR / INDIA</span>
-            <span>FOR THE PLOT.</span>
+            <span>FOR THE PLOT™.</span>
           </div>
 
         </div>
@@ -148,7 +148,7 @@ export default function Tickets() {
                   </div>
                   <div className="flex flex-col">
                     <span>SEASON 001</span>
-                    <span>FOR THE PLOT.</span>
+                    <span>FOR THE PLOT™.</span>
                   </div>
                 </div>
               </div>

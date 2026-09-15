@@ -124,7 +124,7 @@ export default function TheLeague() {
   }, []);
 
   return (
-    <section id="league" ref={sectionRef} className="w-full bg-transparent flex flex-col py-16 overflow-hidden font-sans">
+    <section id="league" ref={sectionRef} className="w-full min-h-screen bg-transparent relative flex flex-col justify-center overflow-hidden py-24 pb-0 z-10 border-t border-transparent">
       
       {/* Header Section */}
       <div className="w-full max-w-[1800px] mx-auto px-8 md:px-16 xl:px-32 mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8 relative z-10 transition-all duration-1000 opacity-100 translate-y-0">
@@ -135,7 +135,7 @@ export default function TheLeague() {
           </h2>
           <p className={`text-[#aaaaaa] text-sm md:text-base leading-relaxed max-w-lg tracking-widest transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             DIFFERENT IDENTITIES. ONE STAGE.<br />
-            EACH TEAM IS A MINI-BRAND INSIDE HOOP CITY.
+            EACH TEAM IS A MINI-BRAND INSIDE HOOP CITY™.
           </p>
         </div>
         <CinematicButton text="MEET THE TEAMS" number="02" className="mb-2" />

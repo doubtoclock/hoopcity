@@ -64,7 +64,7 @@ export default function Memories() {
             THE NIGHT REMAINS.
           </h2>
           <span className={`text-[#666] text-[9px] md:text-[10px] tracking-[0.4em] uppercase max-w-[600px] leading-relaxed transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            PLAYERS / MATCHES / CULTURE / CITY SHIFT / COMMUNITY
+            PLAYERS / MATCHES / CULTURE / CITY SHIFT™ / COMMUNITY
           </span>
         </div>
 

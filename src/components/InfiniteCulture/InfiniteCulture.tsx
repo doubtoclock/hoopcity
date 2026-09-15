@@ -34,7 +34,7 @@ export default function InfiniteCulture() {
   const marqueeText = categories.map(cat => cat.label).join(' • ') + ' • ';
 
   return (
-    <section ref={sectionRef} className="w-full bg-transparent flex flex-col border-t border-white/10">
+    <section ref={sectionRef} className="w-full bg-transparent flex flex-col border-t border-transparent">
       
       {/* Top Header Bar */}
       <div className="w-full px-8 py-6 md:px-16 flex border-b border-white/10">

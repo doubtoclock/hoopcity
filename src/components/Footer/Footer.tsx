@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <>
       {/* Foreground Shutter - The Footer */}
-      <footer className="relative z-20 w-full bg-[#030303] font-mono text-[11px] md:text-[13px] tracking-[0.2em] uppercase text-[#888] pt-16 pb-8 md:pt-24 md:pb-10 shadow-[0_30px_50px_rgba(0,0,0,1)]">
+      <footer className="relative z-20 w-full bg-transparent font-mono text-[11px] md:text-[13px] tracking-[0.2em] uppercase text-[#888] pt-16 pb-8 md:pt-24 md:pb-10 shadow-[0_30px_50px_rgba(0,0,0,1)]">
         <div className="w-full max-w-[1800px] mx-auto px-6 md:px-12 flex flex-col">
           
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-0 mb-24 relative w-full">
