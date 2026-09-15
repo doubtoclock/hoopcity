@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Trona';
+  src: url('/fonts/trona/trona-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ribes';
+  src: url('/fonts/ribes/ribes-main/fonts/Ribes-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ribes';
+  src: url('/fonts/ribes/ribes-main/fonts/Ribes-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ribes';
+  src: url('/fonts/ribes/ribes-main/fonts/Ribes-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-bg-color: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #aaaaaa;
+  --color-accent-orange: #FF6100;
+  --color-accent-pink: #F40B9B;
+
+  --font-inter: var(--font-inter), sans-serif;
+  --font-bebas: var(--font-bebas), sans-serif;
+  --font-marker: var(--font-marker), cursive;
+  --font-trona: 'Trona', serif;
+  --font-caveat: var(--font-caveat), cursive;
+  --font-ribes: 'Ribes', sans-serif;
+}
+
+html, body {
+  @apply bg-bg-color text-text-primary font-ribes max-w-[100vw] overflow-x-clip scroll-smooth;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+html { scroll-behavior: smooth; }
+
+/* City Shift Global Glow Override */
+body.city-shift-live {
+  transition: all 1s ease-in-out;
+}
+
+body.city-shift-live img,
+body.city-shift-live button,
+body.city-shift-live [class*="border-"] {
+  border-color: rgba(255, 97, 0, 0.5) !important;
+  box-shadow: 0 0 25px rgba(255, 97, 0, 0.25) !important;
+}
+
+/* Custom Cursor */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.cursor,
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor,
+  .cursor-dot {
+    display: block;
+  }
+}
+
+.cursor {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition:
+    width 0.25s,
+    height 0.25s,
+    background 0.25s;
+}
+
+.cursor.big {
+  width: 58px;
+  height: 58px;
+  background: #fff;
+}
+
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  mix-blend-mode: difference;
+}
+
+/* Hero 3D Logo */
+.logo-stage {
+  position: relative;
+  width: min(540px, 76vw);
+  aspect-ratio: 1.45;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+}
+
+.logo-aura {
+  position: absolute;
+  width: 76%;
+  height: 70%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,104,17,.13),
+      rgba(255,45,134,.05) 40%,
+      transparent 70%
+    );
+  filter: blur(22px);
+}
+
+.logo-ring {
+  position: absolute;
+  width: 90%;
+  height: 38%;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%;
+  transform: rotate(-14deg);
+  box-shadow:
+    0 0 50px rgba(255,255,255,.035);
+}
+
+.logo-3d {
+  position: relative;
+  width: 74%;
+  max-width: 430px;
+  transform-style: preserve-3d;
+  transform: rotateX(4deg) rotateY(-7deg);
+  filter: drop-shadow(
+    0 28px 35px rgba(0, 0, 0, 0.6)
+  );
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+.logo-3d img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: rotateX(4deg) rotateY(-7deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(6deg) rotateY(-5deg) translateY(-10px);
+  }
+}
+
+/* Hero Entrance Animations */
+@keyframes fadeInSlow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeScaleIn {
+  from { opacity: 0; transform: scale(0.95) translateZ(-50px); }
+  to { opacity: 1; transform: scale(1) translateZ(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); clip-path: inset(100% 0 0 0); }
+  to { opacity: 1; transform: translateY(0); clip-path: inset(-20% 0 -20% 0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-slow { animation: fadeInSlow 2s ease-out forwards; }
+.animate-fade-scale-in { animation: fadeScaleIn 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.animate-fade-up { animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.animate-reveal-up { animation: revealUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
