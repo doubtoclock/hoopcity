@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function IntroOverlay() {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,30 +9,31 @@ export default function IntroOverlay() {
 
   useEffect(() => {
     // Check for reduced motion preference
-    const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
     setIsReducedMotion(mql.matches);
 
     // Lock scrolling while intro is visible
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
 
     // The entire animation takes 4 seconds (4000ms).
     // After 4.2 seconds, we safely remove the component from the DOM.
     const timer = setTimeout(() => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
       setIsVisible(false);
     }, 4200);
 
     return () => {
       clearTimeout(timer);
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed inset-0 z-[9999] bg-[#020202] flex items-center justify-center overflow-hidden intro-overlay-fade ${isReducedMotion ? 'reduced-motion' : ''}`}>
-      
+    <div
+      className={`fixed inset-0 z-[9999] bg-[#020202] flex items-center justify-center overflow-hidden intro-overlay-fade ${isReducedMotion ? "reduced-motion" : ""}`}
+    >
       {/* Film Grain Texture */}
       <div className="absolute inset-0 opacity-10 mix-blend-overlay bg-[url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png')] bg-repeat" />
 
@@ -41,7 +42,10 @@ export default function IntroOverlay() {
 
       {/* Very subtle court lines in background */}
       <div className="absolute inset-0 opacity-[0.03] flex items-center justify-center pointer-events-none mix-blend-screen">
-        <svg viewBox="0 0 100 100" className="w-[150vw] h-[150vh] md:w-full md:h-full stroke-white stroke-[0.1] fill-none">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-[150vw] h-[150vh] md:w-full md:h-full stroke-white stroke-[0.1] fill-none"
+        >
           <circle cx="50" cy="50" r="15" />
           <line x1="50" y1="0" x2="50" y2="100" />
           <line x1="0" y1="50" x2="100" y2="50" strokeDasharray="1 2" />
@@ -50,13 +54,12 @@ export default function IntroOverlay() {
 
       {/* Rolling Basketballs Container */}
       <div className="absolute inset-0 flex items-center justify-center intro-balls-wrapper">
-        
         {/* Left Ball */}
         <div className="absolute w-32 h-32 md:w-56 md:h-56 intro-ball-left">
-          <Image 
-            src="/images/basketball.png" 
-            alt="" 
-            fill 
+          <Image
+            src="/images/BASKETBALL.png"
+            alt=""
+            fill
             className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]"
             priority
           />
@@ -64,15 +67,14 @@ export default function IntroOverlay() {
 
         {/* Right Ball */}
         <div className="absolute w-32 h-32 md:w-56 md:h-56 intro-ball-right">
-          <Image 
-            src="/images/basketball.png" 
-            alt="" 
-            fill 
+          <Image
+            src="/images/BASKETBALL.png"
+            alt=""
+            fill
             className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)] scale-x-[-1]"
             priority
           />
         </div>
-
       </div>
 
       {/* Typography Reveal */}
@@ -89,7 +91,9 @@ export default function IntroOverlay() {
         <div className="w-4 h-px bg-white/20" />
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         /* 
           TIMING OUTLINE (Total 4.0s):
           0.0-3.0s: Balls roll continuously across the screen (one above, one below)
@@ -184,7 +188,9 @@ export default function IntroOverlay() {
           25%, 80% { opacity: 1; filter: none; transform: none; }
           100% { opacity: 0; filter: none; transform: none; }
         }
-      `}} />
+      `,
+        }}
+      />
     </div>
   );
 }
