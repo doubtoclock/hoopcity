@@ -154,34 +154,92 @@ const partnersData = [
     ]
   },
   {
-    id: "reliance",
-    name: "RELIANCE",
-    tagline: "CONNECTING THE NATION.",
-    description: "Bridging the gap between fans and the game through unmatched digital connectivity and reach.",
-    imagePath: "/images/sponsors/reliance-retail-logo.png",
-    brandColor: "#0033A0",
-    teamName: "THE ROOTS",
+    id: "nexus",
+    name: "NEXUS ENERGY",
+    tagline: "POWERING THE GAME.",
+    description: "Fueling athletes with next-generation energy and hydration.",
+    imagePath: "/images/sponsors/nexus.jpg",
+    brandColor: "#61FF00",
+    teamName: "THE SURGE",
     slides: [
       {
         type: "intro",
-        title: "RELIANCE PRESENTS",
-        subtitle: "THE ROOTS",
-        text: "Connecting every fan, every play, everywhere."
+        title: "NEXUS ENERGY PRESENTS",
+        subtitle: "THE SURGE",
+        text: "Unstoppable energy on the court."
       },
       {
         type: "jersey",
         title: "THE KIT",
-        subtitle: "POWERED BY RELIANCE"
+        subtitle: "POWERED BY NEXUS"
       },
       {
         type: "context",
-        title: "DIGITAL REACH",
-        subtitle: "UNITING THE FANS",
-        text: "Bringing the game directly to you.",
-        imagePath: "/images/ecosystem/ecosystem_center_ball_1789295994272.jpg"
+        title: "UNLIMITED STAMINA",
+        subtitle: "FUEL FOR CHAMPIONS",
+        text: "Stay energized through every play.",
+        imagePath: "/images/ecosystem/eco_food_1789296074778.jpg"
       }
     ]
   },
+  {
+    id: "kicks",
+    name: "KICKS CO.",
+    tagline: "OWN THE STREETS.",
+    description: "Premium streetwear and sneakers for the ultimate urban lifestyle.",
+    imagePath: "/images/sponsors/kicks.jpg",
+    brandColor: "#FF4500",
+    teamName: "URBAN LEGENDS",
+    slides: [
+      {
+        type: "intro",
+        title: "KICKS CO. PRESENTS",
+        subtitle: "URBAN LEGENDS",
+        text: "Style that speaks on and off the court."
+      },
+      {
+        type: "jersey",
+        title: "THE KIT",
+        subtitle: "POWERED BY KICKS CO."
+      },
+      {
+        type: "context",
+        title: "STREET CULTURE",
+        subtitle: "FASHION MEETS SPORT",
+        text: "Define your game. Define your style.",
+        imagePath: "/images/ecosystem/eco_fashion_1789296020590.jpg"
+      }
+    ]
+  },
+  {
+    id: "fibernet",
+    name: "FIBERNET",
+    tagline: "THE SPEED OF NOW.",
+    description: "Next-generation connectivity bringing the game to every screen.",
+    imagePath: "/images/sponsors/fibernet.jpg",
+    brandColor: "#00E5FF",
+    teamName: "THE NETWORKS",
+    slides: [
+      {
+        type: "intro",
+        title: "FIBERNET PRESENTS",
+        subtitle: "THE NETWORKS",
+        text: "Connecting fans with lightning-fast speeds."
+      },
+      {
+        type: "jersey",
+        title: "THE KIT",
+        subtitle: "POWERED BY FIBERNET"
+      },
+      {
+        type: "context",
+        title: "DIGITAL FRONTIER",
+        subtitle: "ALWAYS CONNECTED",
+        text: "Experience the game without limits.",
+        imagePath: "/images/ecosystem/eco_brands_1789296109694.jpg"
+      }
+    ]
+  }
 ];
 
 export default function SponsorsTicker() {
@@ -258,32 +316,28 @@ export default function SponsorsTicker() {
             <h2 className="text-white font-ribes text-3xl md:text-4xl lg:text-5xl tracking-widest uppercase mt-4">
               BUILT TOGETHER<span className="transition-colors duration-500" style={{ color: activePartner.brandColor }}>.</span>
             </h2>
-            <p className="text-[#666] font-mono text-[10px] md:text-xs tracking-[0.3em] uppercase mt-2">
+            <p className="text-[#666] font-mono text-sm md:text-base tracking-[0.3em] uppercase mt-2">
               BRANDS THAT MOVE THE CITY.
             </p>
           </div>
 
-          <div className="hidden lg:flex flex-col text-[#444] font-mono text-[9px] tracking-[0.3em] text-right uppercase gap-2">
-            <span>BASKETBALL</span>
-            <span>CULTURE</span>
-            <span>COMMUNITY</span>
-          </div>
+
         </div>
 
         {/* Static Grid Section */}
         <div className="w-full mb-16 md:mb-20">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6 w-full">
             {partnersData.map((partner, index) => {
               return (
                 <div
                   key={partner.id}
                   onMouseEnter={() => setActiveIndex(index)}
                   onClick={() => handleSponsorClick(index)}
-                  className="partner-item w-full h-28 md:h-32 flex items-center justify-center cursor-pointer transition-all duration-500 relative bg-white/[0.02] border-white/5 border rounded-lg overflow-hidden group"
+                  className="partner-item w-full h-28 md:h-32 flex items-center justify-center cursor-pointer transition-all duration-500 relative bg-transparent border border-transparent rounded-lg overflow-hidden group"
                 >
-                  {/* Active State Overlay (Now Permanent) */}
+                  {/* Hover State Overlay */}
                   <div
-                    className="absolute inset-0 transition-opacity duration-500 z-0 opacity-100"
+                    className="absolute inset-0 transition-opacity duration-500 z-0 opacity-0 group-hover:opacity-100"
                   >
                     <div className="absolute inset-0 transition-all duration-500" style={{ backgroundColor: `${partner.brandColor}1A`, boxShadow: `inset 0 0 25px ${partner.brandColor}4D` }}></div>
 

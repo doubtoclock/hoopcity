@@ -63,7 +63,7 @@ export default function Memories() {
           <h2 className={`text-white font-trona text-5xl md:text-[5rem] leading-[0.85] tracking-[-0.02em] mb-8 drop-shadow-[0_10px_30px_rgba(0,0,0,1)] transition-all duration-[800ms] delay-[600ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             THE NIGHT REMAINS.
           </h2>
-          <span className={`text-[#666] text-[9px] md:text-[10px] tracking-[0.4em] uppercase max-w-[600px] leading-relaxed transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <span className={`text-[#666] text-xs md:text-sm tracking-[0.4em] uppercase max-w-[600px] leading-relaxed transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             PLAYERS / MATCHES / CULTURE / CITY SHIFT™ / COMMUNITY
           </span>
         </div>
@@ -76,7 +76,7 @@ export default function Memories() {
             <MemoryImage src={images.tl} alt="Players" />
             <div className="flex items-center gap-3 mt-4">
               <div className="w-3 h-[1px] bg-[#FF6100]"></div>
-              <span className="text-[#888] font-mono text-[10px] tracking-[0.3em] uppercase">LAYER / 001</span>
+              <span className="text-[#888] font-mono text-xs md:text-sm tracking-[0.3em] uppercase">LAYER / 001</span>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function Memories() {
             <div className={`flex flex-col transition-all duration-[1200ms] delay-[400ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'}`}>
               <MemoryImage src={images.feature} alt="Live Action" isFeature={true} />
               <div className="w-full flex justify-end items-center gap-3 mt-4">
-                <span className="text-[#888] font-mono text-[10px] tracking-[0.3em] uppercase">MATCH / 004</span>
+                <span className="text-[#888] font-mono text-xs md:text-sm tracking-[0.3em] uppercase">MATCH / 004</span>
                 <div className="w-3 h-[1px] bg-[#F40B9B]"></div>
               </div>
             </div>
@@ -95,13 +95,13 @@ export default function Memories() {
                 <MemoryImage src={images.bl} alt="Culture" />
                 <div className="flex items-center gap-3 mt-4">
                   <div className="w-3 h-[1px] bg-white/30"></div>
-                  <span className="text-[#888] font-mono text-[10px] tracking-[0.3em] uppercase">CULTURE / 006</span>
+                  <span className="text-[#888] font-mono text-xs md:text-sm tracking-[0.3em] uppercase">CULTURE / 006</span>
                 </div>
               </div>
               <div className={`flex flex-col items-end transition-all duration-[1200ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'}`}>
                 <MemoryImage src={images.br} alt="Community" />
                 <div className="flex items-center gap-3 mt-4">
-                  <span className="text-[#888] font-mono text-[10px] tracking-[0.3em] uppercase">CROWD / 003</span>
+                  <span className="text-[#888] font-mono text-xs md:text-sm tracking-[0.3em] uppercase">CROWD / 003</span>
                   <div className="w-3 h-[1px] bg-white/30"></div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function Memories() {
           <div className={`w-full md:col-span-1 md:mt-40 flex flex-col items-end transition-all duration-[1200ms] delay-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'}`}>
             <MemoryImage src={images.tr} alt="City Shift" />
             <div className="flex items-center gap-3 mt-4">
-              <span className="text-[#888] font-mono text-[10px] tracking-[0.3em] uppercase">CITY / 002</span>
+              <span className="text-[#888] font-mono text-xs md:text-sm tracking-[0.3em] uppercase">CITY / 002</span>
               <div className="w-3 h-[1px] bg-[#FF6100]"></div>
             </div>
           </div>

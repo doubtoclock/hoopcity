@@ -136,7 +136,6 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 <div className="flex flex-col font-mono text-xs md:text-sm text-white/60 tracking-[0.15em] uppercase leading-relaxed">
                   <span>PLAYERS.</span>
                   <span>CREATORS.</span>
-                  <span>BUILDERS.</span>
                   <span>THE CITY NEEDS YOU.</span>
                 </div>
               </div>
@@ -172,12 +171,8 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
           <div className="flex flex-col md:flex-row md:items-start justify-between w-full mb-10 mt-4 md:mt-0 gap-6">
             <div className="flex flex-col">
               <h3 className="text-white font-mono text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">
-                JOIN HOOP CITY™
+                REGISTER AND BE PART OF THE MOVEMENT.
               </h3>
-              <div className="flex items-center gap-4">
-                <div className="w-6 h-0.5 bg-red-600"></div>
-                <span className="text-white/40 font-mono text-xs md:text-sm tracking-[0.2em] uppercase">REGISTER AND BE PART OF THE MOVEMENT.</span>
-              </div>
             </div>
 
             <div className="hidden md:flex flex-col pl-6 border-l border-white/10 font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase h-max">

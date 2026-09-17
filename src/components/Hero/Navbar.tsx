@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = ['ecosystem', 'cut', 'league', 'people', 'memories'];
+    const sections = ['ecosystem', 'cut', 'city-shift', 'league', 'people'];
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -37,10 +37,10 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'ecosystem', label: 'ECOSYSTEM' },
-    { id: 'cut', label: 'CUT' },
-    { id: 'league', label: 'LEAGUE' },
-    { id: 'people', label: 'PEOPLE' },
-    { id: 'memories', label: 'MEMORIES' }
+    { id: 'cut', label: 'THE CUT' },
+    { id: 'city-shift', label: 'CITY SHIFT' },
+    { id: 'league', label: 'THE LEAGUE' },
+    { id: 'people', label: 'PEOPLE' }
   ];
 
   return (
@@ -100,16 +100,16 @@ export default function Navbar() {
           </span>
         </div>
         
-        {/* City Shift Button */}
+        {/* Registration Button */}
         <a 
-          href="#city-shift" 
+          href="#registration" 
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById('city-shift')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
           }}
           className="border border-red-600/80 text-white font-ribes text-[10px] md:text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-red-600/10 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all"
         >
-          CITY SHIFT™ <span className="text-red-500 font-sans text-sm leading-none -mt-0.5">↗</span>
+          REGISTRATION <span className="text-red-500 font-sans text-sm leading-none -mt-0.5">↗</span>
         </a>
       </div>
       

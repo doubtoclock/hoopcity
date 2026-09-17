@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <>
       {/* Foreground Shutter - The Footer */}
-      <footer className="relative z-20 w-full bg-transparent font-mono text-[11px] md:text-[13px] tracking-[0.2em] uppercase text-[#888] pt-16 pb-8 md:pt-24 md:pb-10 shadow-[0_30px_50px_rgba(0,0,0,1)]">
+      <footer className="relative z-20 w-full bg-transparent font-mono text-xs md:text-sm lg:text-base tracking-[0.2em] uppercase text-[#888] pt-16 pb-8 md:pt-24 md:pb-10 shadow-[0_30px_50px_rgba(0,0,0,1)]">
         <div className="w-full max-w-[1800px] mx-auto px-6 md:px-12 flex flex-col">
           
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-0 mb-24 relative w-full">
@@ -74,7 +74,7 @@ export default function Footer() {
                 <img src="/logo.svg" alt="HOOP CITY" className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(255,97,0,0.4)]" />
               </div>
               
-              <div className="flex items-center gap-3 md:gap-4 relative z-10 text-[10px] md:text-[12px] tracking-[0.3em] whitespace-nowrap">
+              <div className="flex items-center gap-3 md:gap-4 relative z-10 text-xs md:text-sm tracking-[0.3em] whitespace-nowrap">
                 <span>BASKETBALL</span> 
                 <span className="text-[#444]">/</span> 
                 <span>CULTURE</span> 
@@ -101,14 +101,14 @@ export default function Footer() {
               
               <div className="flex flex-col gap-4 items-start">
                 <span className="text-white mb-2 tracking-[0.3em] whitespace-nowrap">PARTNERS</span>
-                <a href="#" className="text-[#FF6100] hover:text-[#F40B9B] transition-colors duration-300 flex items-center gap-2 whitespace-nowrap">BECOME A PARTNER <span className="font-sans font-normal text-[12px] leading-none">↗</span></a>
+                <a href="#" className="text-[#FF6100] hover:text-[#F40B9B] transition-colors duration-300 flex items-center gap-2 whitespace-nowrap">BECOME A PARTNER <span className="font-sans font-normal text-sm leading-none">↗</span></a>
               </div>
             </div>
 
           </div>
 
           {/* Bottom */}
-          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 pt-2 text-[10px] md:text-[11px] tracking-widest text-[#555]">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 pt-2 text-xs md:text-sm tracking-widest text-[#555]">
             <span>&copy; 2026 HOOP CITY</span>
             <span>BUILT IN NAGPUR.</span>
           </div>

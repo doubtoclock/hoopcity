@@ -88,8 +88,8 @@ export default function NextSeason() {
       {/* 7. Tiny Editorial Metadata Labels */}
       <div className={`absolute top-12 left-12 text-[#444] text-[8px] tracking-[0.3em] uppercase transition-all duration-[2000ms] delay-[1000ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>NAGPUR / INDIA</div>
       <div className={`absolute top-12 right-12 text-[#444] text-[8px] tracking-[0.3em] uppercase transition-all duration-[2000ms] delay-[1100ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>SEASON 001</div>
-      <div className={`absolute bottom-12 left-12 text-[#444] text-[8px] tracking-[0.3em] uppercase transition-all duration-[2000ms] delay-[1200ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>COURT / A</div>
-      <div className={`absolute bottom-12 right-12 text-[#444] text-[8px] tracking-[0.3em] uppercase transition-all duration-[2000ms] delay-[1300ms] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>END OF SEASON 001</div>
+
+
 
       {/* Central Content */}
       <div className="relative z-10 flex flex-col items-center text-center mt-12">
@@ -104,8 +104,8 @@ export default function NextSeason() {
         </h2>
 
         <div className={`flex flex-col items-center gap-2 mb-16 md:mb-24 transition-all duration-[2000ms] ease-out delay-[1200ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <span className="text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.3em] uppercase">SEASON 001 / NAGPUR</span>
-          <span className="text-[#666] text-[9px] md:text-[10px] tracking-widest">2026</span>
+          <span className="text-[#aaaaaa] text-xs md:text-sm lg:text-base tracking-[0.3em] uppercase">SEASON 001 / NAGPUR</span>
+          <span className="text-[#666] text-xs md:text-sm tracking-widest">2026</span>
         </div>
         <div className={`transition-all duration-[2000ms] delay-[1400ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <CinematicButton text="ENTER HOOP CITY" number="08" />

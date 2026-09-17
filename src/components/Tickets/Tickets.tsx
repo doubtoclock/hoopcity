@@ -42,12 +42,7 @@ export default function Tickets() {
         <div className="w-full xl:w-[25%] flex flex-col justify-between h-full relative z-20 mt-8 xl:mt-0">
           
           <div className="flex flex-col gap-6 md:gap-10">
-            {/* Top tiny text */}
-            <div className="flex items-center gap-4 text-[#888] font-mono text-[9px] tracking-[0.3em] uppercase">
-              <span>THE CUT</span>
-              <span className="text-[#444]">/</span>
-              <span>SEASON 001</span>
-            </div>
+
 
             <div className="flex flex-col gap-6">
               <SectionHeading number="05" title="TICKETS" />
@@ -56,22 +51,19 @@ export default function Tickets() {
                 SECURE<br/>YOUR SPOT<span className="text-[#FF6100]">.</span>
               </h2>
 
-              <p className="font-mono text-[#888] text-[10px] md:text-[11px] tracking-[0.3em] uppercase leading-relaxed mt-4">
+              <p className="font-mono text-[#888] text-sm md:text-base lg:text-lg tracking-[0.3em] uppercase leading-relaxed mt-4">
                 SAME COURT.<br/>DIFFERENT ENERGY.
               </p>
 
               <div className="w-12 h-[1px] bg-white/20 mt-2 mb-2"></div>
 
-              <p className="font-sans text-[#a0a0a0] text-sm md:text-base leading-relaxed max-w-[300px]">
+              <p className="font-sans text-[#a0a0a0] text-base md:text-lg leading-relaxed max-w-[350px]">
                 Secure your pass. Witness the city's best battle on the court. Arrive early. The culture awaits.
               </p>
             </div>
           </div>
 
-          <div className="hidden xl:flex flex-col gap-2 mt-20 text-[#666] font-mono text-[9px] tracking-[0.3em] uppercase">
-            <span>NAGPUR / INDIA</span>
-            <span>FOR THE PLOT™.</span>
-          </div>
+
 
         </div>
 

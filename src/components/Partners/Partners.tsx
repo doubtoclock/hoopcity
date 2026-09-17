@@ -42,10 +42,10 @@ const PartnerPanel = ({ num, title, subtitle, image, isVisible, index, direction
       
       <div className="flex-grow flex flex-col justify-center">
         <div className="flex items-center gap-3">
-          <span className="text-[#FF6100] font-mono text-[10px] tracking-widest">{num}</span>
-          <h3 className="text-white font-mono text-xs md:text-sm tracking-[0.2em] group-hover:text-white group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all duration-500">{title}</h3>
+          <span className="text-[#FF6100] font-mono text-xs tracking-widest">{num}</span>
+          <h3 className="text-white font-mono text-sm md:text-base tracking-[0.2em] group-hover:text-white group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all duration-500">{title}</h3>
         </div>
-        <p className="text-[#666666] font-mono text-[10px] tracking-widest mt-1 md:mt-2 uppercase">{subtitle}</p>
+        <p className="text-[#666666] font-mono text-xs tracking-widest mt-1 md:mt-2 uppercase">{subtitle}</p>
       </div>
       
       <div className="text-[#444] group-hover:text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500">
@@ -106,8 +106,8 @@ export default function Partners() {
               OWN A MOMENT.
             </h2>
             <div className={`flex flex-col items-center gap-2 mb-12 transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-              <span className="text-[#aaaaaa] font-mono text-[10px] md:text-xs tracking-[0.3em]">MORE THAN SPONSORSHIP.</span>
-              <span className="text-white font-mono text-[10px] md:text-xs tracking-[0.3em]">A PLACE IN THE CITY.</span>
+              <span className="text-[#aaaaaa] font-mono text-xs md:text-sm tracking-[0.3em]">MORE THAN SPONSORSHIP.</span>
+              <span className="text-white font-mono text-xs md:text-sm tracking-[0.3em]">A PLACE IN THE CITY.</span>
             </div>
             <div className={`transition-all duration-[800ms] delay-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
               <CinematicButton text="BECOME A PARTNER" number="05" />

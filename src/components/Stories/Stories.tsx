@@ -57,24 +57,18 @@ export default function Stories() {
               THE CITY.
             </h2>
             
-            <div className={`flex flex-col gap-6 text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.3em] uppercase transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            <div className={`flex flex-col gap-6 text-[#aaaaaa] text-xs md:text-sm lg:text-base tracking-[0.3em] uppercase transition-all duration-[800ms] delay-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
               <span className="leading-loose">PLAYERS / TEAMS / CULTURE /<br/>EXPERIENCE / COMMUNITY</span>
-              <div className="w-px h-12 bg-white/20 my-4 hidden lg:block"></div>
-              <span className="leading-loose mt-4 lg:mt-0">MORE<br/>THAN A GAME.<br/>A CITY IN MOTION.</span>
             </div>
           </div>
           
-          <div className="hidden lg:flex flex-col mt-32 text-[#666] text-[9px] tracking-widest uppercase">
-            <span>NAGPUR</span>
-            <span>ALWAYS PLAYS.</span>
-          </div>
+
         </div>
 
         {/* Right Side: Editorial Content */}
         <div className="lg:col-span-7 flex flex-col">
           
-          <div className={`flex justify-between items-center w-full text-[#aaaaaa] text-[10px] tracking-[0.3em] uppercase mb-8 transition-all duration-[800ms] delay-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <span>FEATURED STORY</span>
+          <div className={`flex justify-end items-center w-full text-[#aaaaaa] text-[10px] tracking-[0.3em] uppercase mb-8 transition-all duration-[800ms] delay-[1000ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <div className="flex items-center gap-2">
               <span>LATEST</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF6100] animate-[pulse_3s_ease-in-out_infinite]"></span>
@@ -113,11 +107,11 @@ export default function Stories() {
                 className={`group flex items-center gap-4 md:gap-6 py-4 md:py-6 px-4 md:px-8 border-b border-white/10 hover:border-[#FF6100]/30 hover:bg-[#FF6100]/[0.02] transition-all duration-[800ms] cursor-pointer w-full ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
                 style={{ transitionDelay: `${1400 + index * 150}ms` }}
               >
-                <span className="text-[#FF6100] font-mono text-[10px] md:text-xs tracking-widest w-6 shrink-0 transition-transform duration-500 group-hover:scale-110">{story.num}</span>
+                <span className="text-[#FF6100] font-mono text-xs md:text-sm tracking-widest w-6 shrink-0 transition-transform duration-500 group-hover:scale-110">{story.num}</span>
                 
                 <div className="flex-grow flex flex-col justify-center">
-                  <h4 className="text-white font-trona text-xl md:text-2xl tracking-tight mb-1 group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all duration-500">{story.title}</h4>
-                  <span className="text-[#666] group-hover:text-[#aaa] font-mono text-[8px] md:text-[9px] tracking-widest uppercase transition-colors duration-500">{story.meta}</span>
+                  <h4 className="text-white font-trona text-2xl md:text-3xl lg:text-4xl tracking-tight mb-1 md:mb-2 group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)] transition-all duration-500">{story.title}</h4>
+                  <span className="text-[#666] group-hover:text-[#aaa] font-mono text-[10px] md:text-xs tracking-widest uppercase transition-colors duration-500">{story.meta}</span>
                 </div>
                 
                 {/* Cinematic Image Preview */}

@@ -79,7 +79,7 @@ export default function Hero() {
 
           {/* 4. THE CITY PLAYS AFTER DARK. (Tagline) */}
           <p
-            className="mt-8 text-xs md:text-sm font-bold tracking-[0.6em] text-white/90 font-ribes uppercase animate-fade-in"
+            className="mt-8 text-sm md:text-base lg:text-lg font-bold tracking-[0.6em] text-white/90 font-ribes uppercase animate-fade-in"
             style={{
               textShadow: "0 0 15px rgba(255,97,0,0.5)",
               animationDelay: "0.8s",
@@ -101,13 +101,13 @@ export default function Hero() {
           ></div>
 
           <p
-            className="text-xs md:text-sm tracking-[0.4em] text-[#888888] font-mono uppercase mb-3 animate-fade-in"
+            className="text-sm md:text-base tracking-[0.4em] text-[#888888] font-mono uppercase mb-3 animate-fade-in"
             style={{ animationDelay: "1s", animationFillMode: "both" }}
           >
             3 × 3 BASKETBALL
           </p>
           <p
-            className="text-xs md:text-sm tracking-[0.4em] text-[#888888] font-mono uppercase animate-fade-in"
+            className="text-sm md:text-base tracking-[0.4em] text-[#888888] font-mono uppercase animate-fade-in"
             style={{ animationDelay: "1.1s", animationFillMode: "both" }}
           >
             NAGPUR / SEASON 001
@@ -121,42 +121,18 @@ export default function Hero() {
         style={{ animationDelay: "1.5s", animationFillMode: "both" }}
       >
         {/* Top Left (under navbar) */}
-        <div className="absolute top-32 left-8 md:left-12 flex flex-col gap-2 font-mono text-xs md:text-sm tracking-[0.3em] text-[#888]">
+        <div className="absolute top-32 left-8 md:left-12 flex flex-col gap-2 font-mono font-bold text-sm md:text-base tracking-[0.3em] text-[#888]">
           <div className="w-3 h-[2px] bg-[#e61e25] mb-2"></div>
           <span>BASKETBALL</span>
           <span>CULTURE</span>
           <span>COMMUNITY</span>
         </div>
 
-        {/* Right Center (More Than A Game) */}
-        <div className="absolute top-1/2 right-8 md:right-12 -translate-y-1/2 flex flex-col items-center gap-4 opacity-50">
-          <div className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center p-1">
-            <div className="w-full h-full rounded-full border-[0.5px] border-white/60"></div>
-          </div>
-          <div className="flex flex-col items-center gap-1 font-mono text-[8px] md:text-[9px] tracking-[0.3em] text-[#888] mt-2">
-            <span>MORE</span>
-            <span>THAN A</span>
-            <span>GAME.</span>
-          </div>
-          <div className="w-[1px] h-12 bg-white/20 mt-2"></div>
-        </div>
 
-        {/* Bottom Left */}
-        <div className="absolute bottom-12 left-8 md:left-12 flex items-end gap-4 font-mono text-[9px] md:text-[10px] tracking-[0.2em] text-[#888]">
-          <div className="flex flex-col gap-2">
-            <span>21.1458° N</span>
-            <span>79.0882° E</span>
-          </div>
-          <div className="w-12 h-[1px] bg-white/40 mb-1 ml-2"></div>
-        </div>
 
-        {/* Bottom Right */}
-        <div className="absolute bottom-12 right-8 md:right-12 flex flex-col items-end gap-2 font-mono text-[9px] md:text-[10px] tracking-[0.2em] text-[#888]">
-          <span>A CITY</span>
-          <span>
-            IN MOTION<span className="text-white">.</span>
-          </span>
-        </div>
+
+
+
       </div>
     </section>
   );
