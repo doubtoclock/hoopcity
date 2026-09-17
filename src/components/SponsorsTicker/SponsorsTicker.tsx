@@ -286,23 +286,29 @@ export default function SponsorsTicker() {
                     className="absolute inset-0 transition-opacity duration-500 z-0 opacity-100"
                   >
                     <div className="absolute inset-0 transition-all duration-500" style={{ backgroundColor: `${partner.brandColor}1A`, boxShadow: `inset 0 0 25px ${partner.brandColor}4D` }}></div>
-                    {/* Crosshairs */}
-                    <div className="absolute top-2 left-2 w-2 h-2 border-t border-l transition-colors duration-500" style={{ borderColor: partner.brandColor }}></div>
-                    <div className="absolute top-2 right-2 w-2 h-2 border-t border-r transition-colors duration-500" style={{ borderColor: partner.brandColor }}></div>
-                    <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l transition-colors duration-500" style={{ borderColor: partner.brandColor }}></div>
-                    <div className="absolute bottom-2 right-2 w-2 h-2 border-b border-r transition-colors duration-500" style={{ borderColor: partner.brandColor }}></div>
+
                   </div>
 
-                  <div
-                    className="relative w-20 h-10 md:w-24 md:h-12 lg:w-32 lg:h-16 z-10 transition-all duration-500 opacity-100 grayscale-0 scale-100 group-hover:scale-110"
-                    style={{ transform: partner.scale ? `scale(${partner.scale})` : undefined }}
-                  >
-                    <Image
-                      src={partner.imagePath}
-                      alt={partner.name}
-                      fill
-                      className="object-contain"
-                    />
+                  {/* Logo Container (Handles Y Translation) */}
+                  <div className="z-10 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:-translate-y-2 md:group-hover:-translate-y-3">
+                    <div
+                      className="relative w-20 h-10 md:w-24 md:h-12 lg:w-32 lg:h-16 transition-all duration-500 opacity-100 grayscale-0 scale-100 group-hover:scale-110"
+                      style={{ transform: partner.scale ? `scale(${partner.scale})` : undefined }}
+                    >
+                      <Image
+                        src={partner.imagePath}
+                        alt={partner.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Team Name Hover Overlay (No Background) */}
+                  <div className="absolute bottom-0 left-0 w-full pb-3 px-2 flex justify-center items-end translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] z-20">
+                    <span className="font-mono text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-center text-white" style={{ textShadow: `0 0 10px ${partner.brandColor || '#ffffff'}, 0 0 20px ${partner.brandColor || '#ffffff'}80, 0 4px 8px rgba(0,0,0,0.8)` }}>
+                      {partner.teamName}
+                    </span>
                   </div>
                 </div>
               );

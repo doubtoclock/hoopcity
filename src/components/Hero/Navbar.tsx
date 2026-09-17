@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = ['ecosystem', 'league', 'memories', 'stories'];
+    const sections = ['ecosystem', 'cut', 'league', 'people', 'memories'];
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -37,9 +37,10 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'ecosystem', label: 'ECOSYSTEM' },
+    { id: 'cut', label: 'CUT' },
     { id: 'league', label: 'LEAGUE' },
-    { id: 'memories', label: 'MEMORIES' },
-    { id: 'stories', label: 'STORIES' }
+    { id: 'people', label: 'PEOPLE' },
+    { id: 'memories', label: 'MEMORIES' }
   ];
 
   return (
@@ -64,20 +65,10 @@ export default function Navbar() {
           className="flex items-center gap-4 cursor-pointer group outline-none"
         >
           <img src="/logo.svg" alt="HC" className="w-14 h-14 object-contain group-hover:scale-105 transition-transform duration-300" />
-          <span className="font-ribes text-white text-sm md:text-base tracking-[0.1em] font-bold whitespace-nowrap group-hover:text-[#FF6100] transition-colors duration-300">HOOP CITY</span>
+          <span className="font-ribes text-white text-lg md:text-xl tracking-[0.1em] font-bold whitespace-nowrap group-hover:text-[#FF6100] transition-colors duration-300">HOOP CITY</span>
         </button>
         
-        {/* Red Crosshair Divider */}
-        <div className="hidden md:flex relative w-4 h-4 items-center justify-center shrink-0 mx-2">
-          <div className="absolute w-full h-[1px] bg-red-600"></div>
-          <div className="absolute h-full w-[1px] bg-red-600"></div>
-        </div>
-        
-        <div className="hidden lg:flex flex-col text-[9px] md:text-[10px] text-[#888] font-mono tracking-[0.2em] leading-[1.2] uppercase">
-          <span>BASKETBALL</span>
-          <span>CULTURE</span>
-          <span>COMMUNITY</span>
-        </div>
+
       </div>
       
       {/* Center: Navigation Links */}
@@ -91,7 +82,7 @@ export default function Navbar() {
                 document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
                 setActiveSection(link.id);
               }}
-              className={`text-[11px] md:text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${activeSection === link.id ? 'text-white font-bold' : 'text-[#888] group-hover:text-white'}`}
+              className={`text-xs md:text-sm tracking-[0.2em] uppercase transition-colors duration-300 ${activeSection === link.id ? 'text-white font-bold' : 'text-[#888] group-hover:text-white'}`}
             >
               {link.label}
             </a>

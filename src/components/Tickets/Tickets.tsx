@@ -63,7 +63,7 @@ export default function Tickets() {
               <div className="w-12 h-[1px] bg-white/20 mt-2 mb-2"></div>
 
               <p className="font-sans text-[#a0a0a0] text-sm md:text-base leading-relaxed max-w-[300px]">
-                Register once. Receive your Player ID. Arrive ready. The city decides what happens next.
+                Secure your pass. Witness the city's best battle on the court. Arrive early. The culture awaits.
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Tickets() {
             </div>
 
             <p className="font-sans text-[#a0a0a0] text-[11px] md:text-xs leading-relaxed mb-8 pr-4">
-              Register once. Receive your Player ID + QR. Arrive ready. The city decides what happens next.
+              Secure your pass. Witness the city's best battle on the court. Arrive early. The culture awaits.
             </p>
 
             {/* Event Details Grid */}
@@ -163,7 +163,7 @@ export default function Tickets() {
 
             {/* Floating Action Button inside the bottom edge */}
             <button className="mt-4 bg-[#F5F5F5] text-black hover:bg-white hover:scale-105 transition-all duration-300 rounded-full px-5 py-2.5 flex items-center gap-3 group/btn shadow-[0_10px_30px_rgba(255,97,0,0.3)] w-fit self-start">
-              <span className="font-mono text-[9px] font-bold tracking-widest uppercase">START REGISTRATION</span>
+              <span className="font-mono text-[9px] font-bold tracking-widest uppercase">BUY TICKET</span>
               <span className="font-sans text-base leading-none transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">↗</span>
             </button>
 
@@ -171,7 +171,7 @@ export default function Tickets() {
           </div> {/* Close Front Card with Image Background */}
           
           {/* Small text below cards */}
-          <div className={`absolute -bottom-6 md:-bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 text-[#FF6100] font-mono text-[9px] tracking-[0.3em] uppercase whitespace-nowrap transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`absolute -bottom-6 md:-bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 text-[#FF6100] font-mono text-xs md:text-sm tracking-[0.3em] uppercase whitespace-nowrap transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-1 h-1 rounded-full bg-[#FF6100] shadow-[0_0_10px_#FF6100]"></div>
             <span>A CITY DRIVEN BY HOOPS</span>
           </div>
@@ -181,7 +181,7 @@ export default function Tickets() {
         {/* RIGHT COLUMN: Icons & Features */}
         <div className="w-full xl:w-[25%] flex flex-col justify-between items-start xl:items-end h-full relative z-20 text-left xl:text-right mt-16 xl:mt-0">
           
-          <div className="hidden xl:flex flex-col gap-2 text-[#666] font-mono text-[9px] tracking-[0.3em] uppercase">
+          <div className="hidden xl:flex flex-col gap-2 text-[#666] font-mono text-xs tracking-[0.3em] uppercase">
             <span>BASKETBALL</span>
             <span>CULTURE</span>
             <span>COMMUNITY</span>
@@ -198,8 +198,8 @@ export default function Tickets() {
                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white -translate-y-1/2 rotate-45"></div>
                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white -translate-y-1/2 -rotate-45"></div>
               </div>
-              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-[10px] md:text-xs tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
-                GET YOUR<br/>PLAYER ID
+              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-xs md:text-sm tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
+                GET YOUR<br/>DIGITAL PASS
               </span>
             </div>
 
@@ -209,7 +209,7 @@ export default function Tickets() {
                 <div className="w-5 h-5 rounded-full border border-white/60"></div>
                 <div className="absolute w-2 h-2 rounded-full border border-white"></div>
               </div>
-              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-[10px] md:text-xs tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
+              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-xs md:text-sm tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
                 EXCLUSIVE<br/>ON-GROUND ACCESS
               </span>
             </div>
@@ -221,7 +221,7 @@ export default function Tickets() {
                   <div key={i} className="bg-white/60 rounded-full w-full h-full"></div>
                 ))}
               </div>
-              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-[10px] md:text-xs tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
+              <span className="font-mono text-[#a0a0a0] group-hover:text-white transition-colors duration-500 text-xs md:text-sm tracking-[0.2em] uppercase leading-relaxed max-w-[150px]">
                 BE PART OF<br/>THE MOVEMENT
               </span>
             </div>
@@ -230,7 +230,7 @@ export default function Tickets() {
 
           <div className="hidden xl:flex items-center gap-4 mt-20">
             <div className="w-8 h-[1px] bg-white/20"></div>
-            <span className="text-[#666] font-mono text-[9px] tracking-[0.3em] uppercase">SEASON 001</span>
+            <span className="text-[#666] font-mono text-xs tracking-[0.3em] uppercase">SEASON 001</span>
           </div>
 
         </div>

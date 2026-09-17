@@ -29,12 +29,12 @@ const InputField = ({ icon, label, placeholder, type = "text", rightIcon = null,
     <div className="flex items-center w-full bg-transparent border border-white/10 rounded-2xl px-5 py-4 mb-3 focus-within:border-white/30 transition-colors relative">
       <div className="text-white/40 mr-4 shrink-0">{icon}</div>
       <div className="w-px h-5 bg-white/10 mr-4 shrink-0"></div>
-      <span className="text-white/40 font-mono text-[9px] md:text-[10px] tracking-widest uppercase w-24 md:w-32 shrink-0">{label}</span>
+      <span className="text-white/40 font-mono text-xs md:text-sm tracking-widest uppercase w-24 md:w-32 shrink-0">{label}</span>
       
       {type === "select" ? (
         <div className="flex-1 relative flex justify-end">
           <div 
-            className="w-full text-right cursor-pointer text-[9px] md:text-[10px] tracking-widest font-mono uppercase"
+            className="w-full text-right cursor-pointer text-xs md:text-sm tracking-widest font-mono uppercase"
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className={selected ? 'text-white' : 'text-white/50'}>
@@ -48,7 +48,7 @@ const InputField = ({ icon, label, placeholder, type = "text", rightIcon = null,
               {options.map((opt) => (
                 <div 
                   key={opt.value}
-                  className="px-6 py-4 text-right text-[9px] md:text-[10px] tracking-widest font-mono uppercase cursor-pointer hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+                  className="px-6 py-4 text-right text-xs md:text-sm tracking-widest font-mono uppercase cursor-pointer hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
                   onClick={() => {
                     setSelected(opt.value);
                     setIsOpen(false);
@@ -63,7 +63,7 @@ const InputField = ({ icon, label, placeholder, type = "text", rightIcon = null,
           )}
         </div>
       ) : (
-        <input type={type} placeholder={placeholder} className="bg-transparent outline-none text-white font-mono text-[9px] md:text-[10px] tracking-widest text-right w-full placeholder:text-white/20" />
+        <input type={type} placeholder={placeholder} className="bg-transparent outline-none text-white font-mono text-xs md:text-sm tracking-widest text-right w-full placeholder:text-white/20" />
       )}
       
       {rightIcon && (
@@ -113,9 +113,9 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3">
                 <div className="w-4 h-0.5 bg-red-600"></div>
-                <span className="text-white font-mono text-[10px] tracking-[0.2em] uppercase">HOOP CITY™</span>
+                <span className="text-white font-mono text-xs tracking-[0.2em] uppercase">HOOP CITY™</span>
               </div>
-              <div className="flex flex-col font-mono text-[8px] text-white/50 tracking-[0.2em] uppercase">
+              <div className="flex flex-col font-mono text-[10px] text-white/50 tracking-[0.2em] uppercase">
                 <span>BASKETBALL</span>
                 <span>CULTURE</span>
                 <span>COMMUNITY</span>
@@ -133,7 +133,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
             <div className="flex flex-col gap-12">
               <div className="flex flex-col">
                 <div className="w-6 h-0.5 bg-red-600 mb-4"></div>
-                <div className="flex flex-col font-mono text-[9px] text-white/60 tracking-[0.15em] uppercase leading-relaxed">
+                <div className="flex flex-col font-mono text-xs md:text-sm text-white/60 tracking-[0.15em] uppercase leading-relaxed">
                   <span>PLAYERS.</span>
                   <span>CREATORS.</span>
                   <span>BUILDERS.</span>
@@ -142,7 +142,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               </div>
 
               <div className="flex items-end justify-between w-full">
-                <div className="flex flex-col font-mono text-[8px] text-white/40 tracking-[0.2em] uppercase">
+                <div className="flex flex-col font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase">
                   <span>NAGPUR / INDIA</span>
                   <span>SEASON 001</span>
                 </div>
@@ -176,11 +176,11 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               </h3>
               <div className="flex items-center gap-4">
                 <div className="w-6 h-0.5 bg-red-600"></div>
-                <span className="text-white/40 font-mono text-[9px] tracking-[0.2em] uppercase">REGISTER AND BE PART OF THE MOVEMENT.</span>
+                <span className="text-white/40 font-mono text-xs md:text-sm tracking-[0.2em] uppercase">REGISTER AND BE PART OF THE MOVEMENT.</span>
               </div>
             </div>
 
-            <div className="hidden md:flex flex-col pl-6 border-l border-white/10 font-mono text-[8px] text-white/40 tracking-[0.2em] uppercase h-max">
+            <div className="hidden md:flex flex-col pl-6 border-l border-white/10 font-mono text-[10px] text-white/40 tracking-[0.2em] uppercase h-max">
               <span>SEASON 001</span>
               <span>NAGPUR / INDIA</span>
             </div>
@@ -239,7 +239,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                 <div className="absolute inset-0 bg-gradient-to-r from-[#5a0000] via-[#c21515] to-[#5a0000]"></div>
                 
                 {/* Tech Frame inside button */}
-                <div className="relative px-6 py-5 flex items-center justify-center gap-4 text-white font-mono text-[10px] md:text-xs tracking-[0.2em]">
+                <div className="relative px-6 py-5 flex items-center justify-center gap-4 text-white font-mono text-xs md:text-sm tracking-[0.2em]">
                   <div className="absolute top-3 left-3 w-2 h-2 border-t border-l border-white/30"></div>
                   <div className="absolute bottom-3 left-3 w-2 h-2 border-b border-l border-white/30"></div>
                   <div className="absolute top-3 right-3 w-2 h-2 border-t border-r border-white/30"></div>
@@ -251,12 +251,12 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               
               {/* Footer info */}
               <div className="flex items-center justify-between w-full px-2">
-                <div className="flex items-center gap-2 text-white/30 font-mono text-[8px] tracking-[0.2em] uppercase">
+                <div className="flex items-center gap-2 text-white/30 font-mono text-[10px] tracking-[0.2em] uppercase">
                   {Icons.Lock}
                   <span>YOUR INFORMATION IS SAFE WITH US.</span>
                 </div>
                 
-                <div className="flex items-center gap-4 text-white/20 font-mono text-[7px] tracking-[0.3em] uppercase">
+                <div className="flex items-center gap-4 text-white/20 font-mono text-[9px] tracking-[0.3em] uppercase">
                   <div className="w-8 h-px bg-white/10 hidden md:block"></div>
                   <span>FOR THE PLOT™.</span>
                 </div>

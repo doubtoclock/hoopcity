@@ -57,7 +57,7 @@ export default function Hero() {
             style={{ animationDelay: "0.4s", animationFillMode: "both" }}
           >
             <div className="w-8 md:w-12 h-[1px] bg-[#FF6100]/40"></div>
-            <span className="font-mono text-[9px] md:text-[10px] tracking-[0.4em] text-[#FF6100]">
+            <span className="font-mono text-xs md:text-sm tracking-[0.4em] text-[#FF6100]">
               FOR THE PLOT™.
             </span>
             <div className="w-8 md:w-12 h-[1px] bg-[#FF6100]/40"></div>
@@ -79,7 +79,7 @@ export default function Hero() {
 
           {/* 4. THE CITY PLAYS AFTER DARK. (Tagline) */}
           <p
-            className="mt-8 text-[10px] md:text-xs font-bold tracking-[0.6em] text-white/90 font-ribes uppercase animate-fade-in"
+            className="mt-8 text-xs md:text-sm font-bold tracking-[0.6em] text-white/90 font-ribes uppercase animate-fade-in"
             style={{
               textShadow: "0 0 15px rgba(255,97,0,0.5)",
               animationDelay: "0.8s",
@@ -101,13 +101,13 @@ export default function Hero() {
           ></div>
 
           <p
-            className="text-[9px] md:text-[10px] tracking-[0.4em] text-[#888888] font-mono uppercase mb-3 animate-fade-in"
+            className="text-xs md:text-sm tracking-[0.4em] text-[#888888] font-mono uppercase mb-3 animate-fade-in"
             style={{ animationDelay: "1s", animationFillMode: "both" }}
           >
             3 × 3 BASKETBALL
           </p>
           <p
-            className="text-[9px] md:text-[10px] tracking-[0.4em] text-[#888888] font-mono uppercase animate-fade-in"
+            className="text-xs md:text-sm tracking-[0.4em] text-[#888888] font-mono uppercase animate-fade-in"
             style={{ animationDelay: "1.1s", animationFillMode: "both" }}
           >
             NAGPUR / SEASON 001
@@ -121,7 +121,7 @@ export default function Hero() {
         style={{ animationDelay: "1.5s", animationFillMode: "both" }}
       >
         {/* Top Left (under navbar) */}
-        <div className="absolute top-32 left-8 md:left-12 flex flex-col gap-2 font-mono text-[9px] md:text-[10px] tracking-[0.3em] text-[#888]">
+        <div className="absolute top-32 left-8 md:left-12 flex flex-col gap-2 font-mono text-xs md:text-sm tracking-[0.3em] text-[#888]">
           <div className="w-3 h-[2px] bg-[#e61e25] mb-2"></div>
           <span>BASKETBALL</span>
           <span>CULTURE</span>

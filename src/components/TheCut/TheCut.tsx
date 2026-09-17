@@ -47,7 +47,7 @@ export default function TheCut() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full min-h-screen bg-transparent flex flex-col lg:flex-row border-t border-transparent overflow-hidden">
+    <section id="cut" ref={sectionRef} className="w-full min-h-screen bg-transparent flex flex-col lg:flex-row border-t border-transparent overflow-hidden">
       
       {/* Left Column - The Pitch */}
       <div className={`w-full lg:w-[40%] flex flex-col justify-center px-8 py-20 md:px-16 lg:p-24 xl:p-32 border-b lg:border-b-0 border-white/10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>

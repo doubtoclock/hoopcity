@@ -80,7 +80,7 @@ export default function InfiniteCulture() {
 
       {/* Static Marquee Text */}
       <div className="w-full bg-transparent py-4 border-t border-white/10 overflow-x-auto hide-scrollbar flex whitespace-nowrap relative">
-        <div className="flex whitespace-nowrap text-[#aaaaaa] font-bebas tracking-[0.3em] text-sm w-full justify-center">
+        <div className="flex whitespace-nowrap text-[#aaaaaa] font-bebas tracking-[0.3em] text-base md:text-lg w-full justify-center">
           <span className="px-4">{marqueeText.slice(0, -3)}</span>
         </div>
       </div>

@@ -14,6 +14,7 @@ import Stories from "@/components/Stories/Stories";
 import NextSeason from "@/components/NextSeason/NextSeason";
 import Footer from "@/components/Footer/Footer";
 import TheRules from "@/components/TheRules/TheRules";
+import TheUniverse from "@/components/TheUniverse/TheUniverse";
 import Image from "next/image";
 import GlobalBackground from "@/components/GlobalBackground";
 
@@ -28,11 +29,12 @@ export default function Home() {
       <SponsorsTicker />
       <Ecosystem />
       <TheCut />
-      <TheRules />
-      <InfiniteCulture />
+      <CityShift />
       <TheLeague />
       <Tickets />
-      <CityShift />
+      <TheRules />
+      <InfiniteCulture />
+      <TheUniverse />
       <Partners />
       <Memories />
       <Stories />

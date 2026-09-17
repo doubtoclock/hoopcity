@@ -74,7 +74,7 @@ export default function CinematicButton({
           <div className="w-[1px] h-6 bg-white/20 shrink-0" />
 
           {/* Text */}
-          <span className="font-mono text-[9px] md:text-[11px] tracking-[0.3em] md:tracking-[0.4em] uppercase text-[#e5e5e5] group-hover:text-white transition-colors text-center whitespace-nowrap">
+          <span className="font-mono text-xs md:text-sm tracking-[0.3em] md:tracking-[0.4em] uppercase text-[#e5e5e5] group-hover:text-white transition-colors text-center whitespace-nowrap">
             {isActive && activeStateText ? activeStateText : text}
           </span>
 
