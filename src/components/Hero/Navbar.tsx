@@ -1,9 +1,14 @@
 "use client";
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import RegistrationModal from '../TheCut/RegistrationModal';
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [modalState, setModalState] = useState<{isOpen: boolean, type: 'players' | 'artists' | 'creators'}>({ isOpen: false, type: 'players' });
 
   useEffect(() => {
     const sections = ['ecosystem', 'cut', 'city-shift', 'league', 'people'];
@@ -100,19 +105,48 @@ export default function Navbar() {
           </span>
         </div>
         
-        {/* Registration Button */}
-        <a 
-          href="#registration" 
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="border border-red-600/80 text-white font-ribes text-[10px] md:text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-red-600/10 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all"
-        >
-          REGISTRATION <span className="text-red-500 font-sans text-sm leading-none -mt-0.5">↗</span>
-        </a>
+        {/* Registration Button & Dropdown */}
+        <div className="relative">
+          <button 
+            onClick={() => setIsRegistrationOpen(!isRegistrationOpen)}
+            className="border border-red-600/80 text-white font-ribes text-[10px] md:text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-red-600/10 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all cursor-pointer"
+          >
+            REGISTRATION <span className={`text-red-500 font-sans text-sm leading-none -mt-0.5 transition-transform duration-300 ${isRegistrationOpen ? 'rotate-45' : ''}`}>↗</span>
+          </button>
+          
+          <AnimatePresence>
+            {isRegistrationOpen && (
+              <motion.div 
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 15 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full right-0 mt-4 w-56 bg-[#0a0a0a]/95 border border-white/10 p-2 flex flex-col gap-1 shadow-2xl backdrop-blur-xl"
+              >
+                {['Players', 'Artists', 'Creators'].map((category) => (
+                  <button 
+                    key={category}
+                    onClick={() => {
+                      setIsRegistrationOpen(false);
+                      setModalState({ isOpen: true, type: category.toLowerCase() as any });
+                    }}
+                    className="w-full text-left px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 text-xs tracking-[0.2em] font-ribes uppercase transition-all duration-300 flex items-center justify-between group"
+                  >
+                    {category}
+                    <span className="text-red-600 opacity-0 group-hover:opacity-100 transition-opacity text-lg leading-none">+</span>
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
       
+      <RegistrationModal 
+        isOpen={modalState.isOpen} 
+        onClose={() => setModalState(prev => ({ ...prev, isOpen: false }))} 
+        type={modalState.type}
+      />
     </nav>
   );
 }

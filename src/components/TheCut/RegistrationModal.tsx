@@ -6,6 +6,7 @@ import Image from 'next/image';
 interface RegistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  type?: 'players' | 'artists' | 'creators';
 }
 
 // Icons (Inline SVG to avoid missing dependencies)
@@ -79,8 +80,30 @@ const InputField = ({ icon, label, placeholder, type = "text", rightIcon = null,
   );
 };
 
-export default function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
+export default function RegistrationModal({ isOpen, onClose, type = 'players' }: RegistrationModalProps) {
   if (!isOpen) return null;
+
+  // Dynamic Content based on type
+  const content = {
+    players: {
+      image: '/images/the-cut/the_cut_1v1_1789300913126.jpg',
+      headline: <>BE A<br/>PART<br/>OF THE<br/>CITY<span className="text-red-600">.</span></>,
+      subtext: <>PLAYERS.<br/>CREATORS.<br/>THE CITY NEEDS YOU.</>,
+      buttonText: 'REGISTER - ₹350'
+    },
+    artists: {
+      image: '/images/the-cut/the_cut_3v3_1789300944327.jpg',
+      headline: <>BRING<br/>THE<br/>NOISE<span className="text-red-600">.</span></>,
+      subtext: <>ARTISTS.<br/>PERFORMERS.<br/>SET THE STAGE.</>,
+      buttonText: 'SUBMIT PORTFOLIO'
+    },
+    creators: {
+      image: '/images/the-cut/the_cut_shootout_1789300928564.jpg',
+      headline: <>CAPTURE<br/>THE<br/>CULTURE<span className="text-red-600">.</span></>,
+      subtext: <>PHOTOGRAPHERS.<br/>VIDEOGRAPHERS.<br/>TELL THE STORY.</>,
+      buttonText: 'APPLY FOR PASS'
+    }
+  }[type];
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-8">
@@ -98,7 +121,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/images/the-cut/the_cut_1v1_1789300913126.jpg" 
+              src={content.image} 
               alt="Night Court" 
               fill 
               className="object-cover opacity-50 mix-blend-luminosity"
@@ -125,7 +148,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
             {/* Center Massive Text */}
             <div className="my-auto">
               <h2 className="text-white font-trona text-6xl xl:text-7xl leading-[0.9] drop-shadow-2xl">
-                BE A<br/>PART<br/>OF THE<br/>CITY<span className="text-red-600">.</span>
+                {content.headline}
               </h2>
             </div>
 
@@ -134,9 +157,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
               <div className="flex flex-col">
                 <div className="w-6 h-0.5 bg-red-600 mb-4"></div>
                 <div className="flex flex-col font-mono text-xs md:text-sm text-white/60 tracking-[0.15em] uppercase leading-relaxed">
-                  <span>PLAYERS.</span>
-                  <span>CREATORS.</span>
-                  <span>THE CITY NEEDS YOU.</span>
+                  {content.subtext}
                 </div>
               </div>
 
@@ -184,44 +205,93 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
           {/* Form Inputs */}
           <form className="flex flex-col flex-1" onSubmit={(e) => e.preventDefault()}>
             
-            <InputField icon={Icons.User} label="FULL NAME" placeholder="e.g. Ayush Sanjay" />
-            
+            <InputField icon={Icons.User} label={type === 'artists' ? 'STAGE NAME' : 'FULL NAME'} placeholder="e.g. Ayush Sanjay" />
             <InputField icon={Icons.Calendar} label="DATE OF BIRTH" placeholder="dd - mm - yyyy" rightIcon={Icons.Calendar} />
-            
             <InputField icon={Icons.Phone} type="tel" label="PHONE" placeholder="+91 98765 43210" />
-            
             <InputField icon={Icons.Mail} type="email" label="EMAIL" placeholder="you@domain.com" />
-            
             <InputField icon={Icons.MapPin} label="CITY" placeholder="e.g. Nagpur" />
-            
-            <InputField 
-              icon={Icons.Briefcase} 
-              type="select" 
-              label="POSITION" 
-              options={[
-                { value: 'pg', label: 'POINT GUARD' },
-                { value: 'sg', label: 'SHOOTING GUARD' },
-                { value: 'sf', label: 'SMALL FORWARD' },
-                { value: 'pf', label: 'POWER FORWARD' },
-                { value: 'c', label: 'CENTER' }
-              ]}
-              rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
-            />
 
-            <InputField 
-              icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>} 
-              type="select" 
-              label="JERSEY SIZE" 
-              options={[
-                { value: 's', label: 'SMALL (S)' },
-                { value: 'm', label: 'MEDIUM (M)' },
-                { value: 'l', label: 'LARGE (L)' },
-                { value: 'xl', label: 'EXTRA LARGE (XL)' },
-                { value: 'xxl', label: 'DOUBLE XL (XXL)' }
-              ]}
-              rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
-            />
-            
+            {type === 'players' && (
+              <>
+                <InputField 
+                  icon={Icons.Briefcase} 
+                  type="select" 
+                  label="POSITION" 
+                  options={[
+                    { value: 'pg', label: 'POINT GUARD' },
+                    { value: 'sg', label: 'SHOOTING GUARD' },
+                    { value: 'sf', label: 'SMALL FORWARD' },
+                    { value: 'pf', label: 'POWER FORWARD' },
+                    { value: 'c', label: 'CENTER' }
+                  ]}
+                  rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
+                />
+                <InputField 
+                  icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>} 
+                  type="select" 
+                  label="JERSEY SIZE" 
+                  options={[
+                    { value: 's', label: 'SMALL (S)' },
+                    { value: 'm', label: 'MEDIUM (M)' },
+                    { value: 'l', label: 'LARGE (L)' },
+                    { value: 'xl', label: 'EXTRA LARGE (XL)' },
+                    { value: 'xxl', label: 'DOUBLE XL (XXL)' }
+                  ]}
+                  rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
+                />
+              </>
+            )}
+
+            {type === 'artists' && (
+              <>
+                <InputField 
+                  icon={Icons.Briefcase} 
+                  type="select" 
+                  label="CATEGORY" 
+                  options={[
+                    { value: 'musician', label: 'MUSICIAN' },
+                    { value: 'dj', label: 'DJ' },
+                    { value: 'graffiti', label: 'GRAFFITI ARTIST' },
+                    { value: 'dancer', label: 'DANCER' },
+                    { value: 'mc', label: 'MC / HOST' },
+                    { value: 'other', label: 'OTHER' }
+                  ]}
+                  rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
+                />
+                <InputField icon={Icons.Globe} label="PORTFOLIO" placeholder="Website URL" />
+              </>
+            )}
+
+            {type === 'creators' && (
+              <>
+                <InputField 
+                  icon={Icons.Briefcase} 
+                  type="select" 
+                  label="PLATFORM" 
+                  options={[
+                    { value: 'ig', label: 'INSTAGRAM' },
+                    { value: 'yt', label: 'YOUTUBE' },
+                    { value: 'tt', label: 'TIKTOK' },
+                    { value: 'x', label: 'TWITTER / X' }
+                  ]}
+                  rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
+                />
+                <InputField 
+                  icon={<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>} 
+                  type="select" 
+                  label="CONTENT" 
+                  options={[
+                    { value: 'photo', label: 'PHOTOGRAPHY' },
+                    { value: 'video', label: 'VIDEOGRAPHY' },
+                    { value: 'vlog', label: 'VLOGS' },
+                    { value: 'edit', label: 'SHORT-FORM EDITS' }
+                  ]}
+                  rightIcon={<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 9 12 15 18 9"></polyline></svg>} 
+                />
+                <InputField icon={Icons.Globe} label="PORTFOLIO" placeholder="Channel / Website URL" />
+              </>
+            )}
+
             <InputField icon={Icons.Instagram} label="SOCIAL HANDLE" placeholder="@username" />
             
             <div className="mt-auto pt-6 flex flex-col gap-4">
@@ -240,7 +310,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
                   <div className="absolute top-3 right-3 w-2 h-2 border-t border-r border-white/30"></div>
                   <div className="absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/30"></div>
                   
-                  REGISTER - ₹350 <span className="font-sans text-lg leading-none -mt-1 ml-1">→</span>
+                  {content.buttonText} <span className="font-sans text-lg leading-none -mt-1 ml-1">→</span>
                 </div>
               </button>
               
