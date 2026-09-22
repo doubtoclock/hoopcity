@@ -346,15 +346,17 @@ export default function SponsorsTicker() {
                   {/* Logo Container (Handles Y Translation) */}
                   <div className="z-10 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:-translate-y-2 md:group-hover:-translate-y-3">
                     <div
-                      className="relative w-20 h-10 md:w-24 md:h-12 lg:w-32 lg:h-16 transition-all duration-500 opacity-100 grayscale-0 scale-100 group-hover:scale-110"
+                      className="relative w-20 h-10 md:w-24 md:h-12 lg:w-32 lg:h-16 opacity-100 grayscale-0"
                       style={{ transform: partner.scale ? `scale(${partner.scale})` : undefined }}
                     >
-                      <Image
-                        src={partner.imagePath}
-                        alt={partner.name}
-                        fill
-                        className="object-contain"
-                      />
+                      <div className="w-full h-full relative transition-transform duration-500 ease-out group-hover:scale-125">
+                        <Image
+                          src={partner.imagePath}
+                          alt={partner.name}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -434,15 +436,15 @@ export default function SponsorsTicker() {
                   <span className="font-mono text-xs md:text-sm tracking-[0.4em] text-[#888] uppercase">{selectedSponsor.teamName}</span>
                 </div>
 
-                <div className="flex items-center gap-8">
-                  <span className="font-mono text-[10px] tracking-[0.4em] text-white">
+                <div className="flex items-center gap-8 md:gap-12">
+                  <span className="font-mono text-sm md:text-base tracking-[0.4em] text-white font-bold">
                     0{currentSlideIndex + 1} / 0{selectedSponsor.slides.length}
                   </span>
                   <button 
                     onClick={() => setSelectedSponsorId(null)}
-                    className="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-white/5 transition-colors group"
+                    className="w-16 h-16 flex items-center justify-center border border-white/20 rounded-full hover:bg-white/10 transition-colors group"
                   >
-                    <svg className="w-4 h-4 text-white group-hover:rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    <svg className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
                   </button>
                 </div>
               </div>

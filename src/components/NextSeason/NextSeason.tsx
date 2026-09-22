@@ -50,7 +50,7 @@ export default function NextSeason() {
       <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none overflow-hidden">
         
         {/* 4. Subtle Red/Orange Glow */}
-        <div className={`absolute bottom-[-10%] w-[80%] max-w-[1000px] h-[500px] bg-gradient-to-t from-[#FF6100] to-[#F40B9B] rounded-full blur-[200px] mix-blend-screen transition-all duration-[3000ms] ease-out delay-500 ${isVisible ? 'opacity-[0.06]' : 'opacity-0'}`} />
+
         
         {/* 2. Faint Hoop Silhouette */}
         <div className={`absolute top-[35%] left-1/2 -translate-x-1/2 w-[600px] h-[400px] transition-all duration-[3000ms] ease-out delay-[400ms] ${isVisible ? 'opacity-[0.02] translate-y-0' : 'opacity-0 translate-y-8'}`}>

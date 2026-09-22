@@ -24,7 +24,7 @@ export default function Hero() {
     setTilt({ x: 0, y: 0 });
   };
   return (
-    <section className="relative w-full h-screen flex flex-col overflow-hidden bg-transparent">
+    <section id="home" className="relative w-full h-screen flex flex-col overflow-hidden bg-transparent">
 
 
       {/* Main Center Composition */}
@@ -95,23 +95,6 @@ export default function Hero() {
             </span>
           </p>
 
-          <div
-            className="w-[1px] h-6 bg-white/20 mt-8 mb-6 animate-fade-in"
-            style={{ animationDelay: "0.9s", animationFillMode: "both" }}
-          ></div>
-
-          <p
-            className="text-sm md:text-base tracking-[0.4em] text-[#888888] font-mono uppercase mb-3 animate-fade-in"
-            style={{ animationDelay: "1s", animationFillMode: "both" }}
-          >
-            3 × 3 BASKETBALL
-          </p>
-          <p
-            className="text-sm md:text-base tracking-[0.4em] text-[#888888] font-mono uppercase animate-fade-in"
-            style={{ animationDelay: "1.1s", animationFillMode: "both" }}
-          >
-            NAGPUR / SEASON 001
-          </p>
         </div>
       </div>
 

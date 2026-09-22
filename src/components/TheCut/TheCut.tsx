@@ -10,22 +10,29 @@ const tests = [
     id: '01',
     title: '1V1',
     subtitle: 'INDIVIDUAL SKILL',
-    description: 'No teammates.\nJust you and your game.',
+    description: 'A direct one-on-one challenge testing ball handling, scoring ability, defence, decision-making and ability to create an advantage without relying on teammates.',
     image: '/images/the-cut/the_cut_1v1_1789300913126.jpg'
   },
   {
     id: '02',
     title: 'SHOOTOUT',
-    subtitle: 'RANGE - ACCURACY - COMPOSURE',
-    description: 'Test your shooting ability\nfrom anywhere.',
+    subtitle: 'SHOOTING',
+    description: 'A dedicated shooting challenge testing accuracy, range, consistency and composure under pressure.',
     image: '/images/the-cut/the_cut_shootout_1789300928564.jpg'
   },
   {
     id: '03',
     title: '3V3',
-    subtitle: 'ADAPTABILITY - IQ - CHEMISTRY',
-    description: 'Play with different players.\nShow more than just skill.',
+    subtitle: 'CHEMISTRY & ADAPTABILITY',
+    description: 'A 3-on-3 challenge where players compete with unfamiliar teammates. It tests communication, decision-making, movement, defence, passing, adaptability and ability to contribute within a team.',
     image: '/images/the-cut/the_cut_3v3_1789300944327.jpg'
+  },
+  {
+    id: '04',
+    title: 'DUNK',
+    subtitle: 'ATHLETICISM',
+    description: 'A dunking challenge testing explosiveness, vertical ability, creativity and finishing above the rim.',
+    image: '/images/ecosystem/eco_entertainment_1789296126543.jpg'
   }
 ];
 
@@ -113,11 +120,10 @@ export default function TheCut() {
               <div className={`absolute inset-0 transition-opacity duration-700 ${isHovered ? 'bg-gradient-to-t from-black/95 via-black/50 to-transparent' : 'bg-gradient-to-t from-black/90 via-black/40 to-black/20'}`}></div>
               
               {/* Content Block */}
-              <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col transition-all duration-700 ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-80'}`}>
-                <span className="text-[#FF6100] font-trona text-5xl mb-2">{test.id}</span>
+              <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col transition-all duration-700 origin-bottom-left ${isHovered ? 'translate-y-0 opacity-100 scale-105' : 'translate-y-4 opacity-80 scale-100'}`}>
                 <h3 className="text-white font-trona text-5xl xl:text-6xl mb-4 whitespace-nowrap">{test.title}</h3>
                 <h4 className="text-white font-bebas tracking-[0.15em] text-sm md:text-base mb-4 uppercase whitespace-nowrap">{test.subtitle}</h4>
-                <p className={`text-[#aaaaaa] text-sm md:text-base leading-relaxed whitespace-pre-line transition-all duration-700 delay-100 ${isHovered ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0'}`}>
+                <p className={`text-[#aaaaaa] text-sm md:text-base leading-relaxed transition-all duration-700 delay-100 pr-4 ${isHovered ? 'opacity-100 max-h-48' : 'opacity-0 max-h-0'}`}>
                   {test.description}
                 </p>
               </div>

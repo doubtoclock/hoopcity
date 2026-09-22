@@ -32,8 +32,7 @@ export default function Tickets() {
         <div className="absolute w-[100vw] h-[100vw] md:w-[80vw] md:h-[80vw] rounded-full border border-white/[0.04] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen" />
         <div className="absolute w-[60vw] h-[20vw] rounded-[100%] border border-white/[0.08] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-12 mix-blend-screen" />
         
-        {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] bg-gradient-to-tr from-[#FF6100]/20 to-[#F40B9B]/10 blur-[120px] rounded-full mix-blend-screen" />
+
       </div>
 
       <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-16 flex flex-col xl:flex-row justify-between items-center xl:items-stretch h-full gap-16 xl:gap-0">

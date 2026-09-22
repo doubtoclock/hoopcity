@@ -53,7 +53,7 @@ export default function CityShift() {
   }, [isLive]);
 
   return (
-    <section id="city-shift" className="w-full min-h-screen bg-transparent relative font-mono text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.2em] overflow-hidden flex flex-col justify-between p-6 md:p-12 z-10 border-t border-transparent">
+    <section id="city-shift-main" className="w-full min-h-screen bg-transparent relative font-mono text-[#aaaaaa] text-[10px] md:text-xs tracking-[0.2em] overflow-hidden flex flex-col justify-between p-6 md:p-12 z-10 border-t border-transparent">
       
       {/* Background Environment */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden flex justify-center items-center">
@@ -61,8 +61,7 @@ export default function CityShift() {
         {/* Grain */}
         <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay z-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png')] bg-repeat" />
         
-        {/* Ambient Light */}
-        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[150px] mix-blend-screen transition-all duration-[1500ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${isLive ? 'w-[100vw] h-[100vw] bg-[#FF6100]/[0.08]' : 'w-[50vw] h-[50vw] bg-[#FF6100]/[0.015]'}`} />
+
 
         <MinimalCourt isLive={isLive} />
         <MinimalHoop isLive={isLive} />

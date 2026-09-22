@@ -47,10 +47,8 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-0 mb-24 relative w-full">
             
-            {/* Left */}
+            {/* Left (Empty to preserve flex spacing) */}
             <div className="w-full md:w-1/3 flex flex-col gap-3 items-center md:items-start md:pt-12 shrink-0">
-              <span className="tracking-[0.3em] whitespace-nowrap">NAGPUR / INDIA</span>
-              <span className="tracking-[0.3em] whitespace-nowrap">SEASON 001 / 2026</span>
             </div>
 
             {/* Center (Logo & Orbital) */}
@@ -107,10 +105,8 @@ export default function Footer() {
 
           </div>
 
-          {/* Bottom */}
+          {/* Bottom (Removed per request) */}
           <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 pt-2 text-xs md:text-sm tracking-widest text-[#555]">
-            <span>&copy; 2026 HOOP CITY</span>
-            <span>BUILT IN NAGPUR.</span>
           </div>
 
         </div>

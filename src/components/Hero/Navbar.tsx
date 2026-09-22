@@ -11,7 +11,7 @@ export default function Navbar() {
   const [modalState, setModalState] = useState<{isOpen: boolean, type: 'players' | 'artists' | 'creators'}>({ isOpen: false, type: 'players' });
 
   useEffect(() => {
-    const sections = ['ecosystem', 'cut', 'city-shift', 'league', 'people'];
+    const sections = ['home', 'cut', 'league', 'city-shift', 'people', 'memories'];
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -41,11 +41,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { id: 'ecosystem', label: 'ECOSYSTEM' },
+    { id: 'home', label: 'HOME' },
     { id: 'cut', label: 'THE CUT' },
-    { id: 'city-shift', label: 'CITY SHIFT' },
     { id: 'league', label: 'THE LEAGUE' },
-    { id: 'people', label: 'PEOPLE' }
+    { id: 'city-shift', label: 'CITY SHIFT' },
+    { id: 'people', label: 'PEOPLE' },
+    { id: 'memories', label: 'MEMORIES' }
   ];
 
   return (
@@ -98,12 +99,7 @@ export default function Navbar() {
       
       {/* Right: Location & City Shift Button */}
       <div className="flex items-center justify-end gap-6 w-1/3 z-10">
-        <div className="hidden xl:flex items-center gap-6">
-          <div className="w-px h-5 bg-white/20"></div>
-          <span className="text-[10px] md:text-xs tracking-[0.3em] text-[#888] font-mono uppercase whitespace-nowrap">
-            NAGPUR / INDIA
-          </span>
-        </div>
+
         
         {/* Registration Button & Dropdown */}
         <div className="relative">

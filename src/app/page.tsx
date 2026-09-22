@@ -2,7 +2,6 @@ import IntroOverlay from "@/components/Intro/IntroOverlay";
 import Navbar from "@/components/Hero/Navbar";
 import Hero from "@/components/Hero/Hero";
 import SponsorsTicker from "@/components/SponsorsTicker/SponsorsTicker";
-import Ecosystem from "@/components/Ecosystem/Ecosystem";
 import InfiniteCulture from "@/components/InfiniteCulture/InfiniteCulture";
 import TheCut from "@/components/TheCut/TheCut";
 import TheLeague from "@/components/TheLeague/TheLeague";
@@ -22,21 +21,19 @@ export default function Home() {
   return (
     <main className="relative bg-transparent">
       <GlobalBackground />
-      
       <IntroOverlay />
       <Navbar />
       <Hero />
       <SponsorsTicker />
-      <Ecosystem />
       <TheCut />
-      <CityShift />
       <TheLeague />
-      <Tickets />
       <TheRules />
-      <InfiniteCulture />
+      <CityShift />
       <TheUniverse />
-      <Partners />
       <Memories />
+      <Tickets />
+      <InfiniteCulture />
+      <Partners />
       <Stories />
       <NextSeason />
       <Footer />
